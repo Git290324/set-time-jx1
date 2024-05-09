@@ -1,0 +1,13 @@
+# Chỉnh giờ trùng với giờ thực tế Hồ Chí Minh
+
+sudo yum install ntp
+sudo ntpdate pool.ntp.org
+
+sudo systemctl enable ntpd
+sudo systemctl start ntpd
+
+sudo systemctl status ntpd
+
+sudo systemctl is-enabled ntpd || sudo systemctl enable ntpd
+
+sudo reboot
